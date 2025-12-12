@@ -1,6 +1,4 @@
 using Smdb.Core.Movies;
-using Smdb.Core.Actors;
-using Smdb.Core.ActorMovies;
 using Smdb.Core.Users;
 
 namespace Smdb.Core.Db;
@@ -11,30 +9,21 @@ public class MemoryDatabase
     public static MemoryDatabase Instance => _instance ??= new MemoryDatabase();
 
     public List<Movie> Movies { get; private set; }
-    public List<Actor> Actors { get; private set; }
-    public List<ActorMovie> ActorMovies { get; private set; }
     public List<User> Users { get; private set; }
 
     private int _nextMovieId = 1;
-    private int _nextActorId = 1;
-    private int _nextActorMovieId = 1;
     private int _nextUserId = 1;
 
     private MemoryDatabase()
     {
         Movies = new List<Movie>();
-        Actors = new List<Actor>();
-        ActorMovies = new List<ActorMovie>();
         Users = new List<User>();
 
         SeedMovies();
-        SeedActors();
         SeedUsers();
     }
 
     public int NextMovieId() => ++_nextMovieId;
-    public int NextActorId() => ++_nextActorId;
-    public int NextActorMovieId() => ++_nextActorMovieId;
     public int NextUserId() => ++_nextUserId;
 
     private void SeedMovies()
@@ -90,65 +79,60 @@ public class MemoryDatabase
             new Movie(47, "Avengers: Endgame", 2019, "Survivors attempt a time-heist to undo cosmic devastation."),
             new Movie(48, "Toy Story", 1995, "Rivalry between a cowboy doll and a space ranger turns to friendship."),
             new Movie(49, "Inside Out", 2015, "A girl's emotions guide her through a difficult move."),
-            new Movie(50, "The Social Network", 2010, "Facebook's founding sparks friendship and legal battles.")
+            new Movie(50, "The Social Network", 2010, "Facebook's founding sparks friendship and legal battles."),
+            new Movie(51, "WALL-E", 2008, "A lonely robot finds love while cleaning a deserted Earth."),
+            new Movie(52, "The Truman Show", 1998, "A man discovers his life is a reality TV show."),
+            new Movie(53, "Eternal Sunshine of the Spotless Mind", 2004, "A couple erases memories of each other."),
+            new Movie(54, "Memento", 2000, "A man with memory loss hunts his wife's killer."),
+            new Movie(55, "The Grand Budapest Hotel", 2014, "A concierge and his protégé embark on an adventure."),
+            new Movie(56, "Moonlight", 2016, "A young Black man grapples with identity and sexuality."),
+            new Movie(57, "12 Years a Slave", 2013, "A free man is kidnapped and sold into slavery."),
+            new Movie(58, "The Revenant", 2015, "A frontiersman seeks revenge after a brutal bear attack."),
+            new Movie(59, "Birdman", 2014, "An actor struggles to mount a Broadway comeback."),
+            new Movie(60, "Get Out", 2017, "A Black man uncovers a disturbing secret at his girlfriend's estate."),
+            new Movie(61, "Us", 2019, "A family is terrorized by their twisted doppelgängers."),
+            new Movie(62, "Hereditary", 2018, "A family unravels after a tragic loss reveals dark secrets."),
+            new Movie(63, "The Witch", 2015, "A Puritan family encounters evil in the New England wilderness."),
+            new Movie(64, "It Follows", 2014, "A teen is haunted by a supernatural entity after a tryst."),
+            new Movie(65, "A Quiet Place", 2018, "A family survives in silence to avoid deadly creatures."),
+            new Movie(66, "Arrival", 2016, "A linguist deciphers alien messages as humanity faces crisis."),
+            new Movie(67, "Blade Runner 2049", 2017, "A replicant uncovers a secret that could destabilize society."),
+            new Movie(68, "Ex Machina", 2014, "A programmer evaluates a humanoid AI's consciousness."),
+            new Movie(69, "Her", 2013, "A lonely writer falls for an operating system."),
+            new Movie(70, "Drive", 2011, "A getaway driver becomes entangled in a heist gone wrong."),
+            new Movie(71, "Nightcrawler", 2014, "A man exploits crime journalism in Los Angeles."),
+            new Movie(72, "The Wolf of Wall Street", 2013, "A stockbroker's rise fueled by corruption and excess."),
+            new Movie(73, "Django Unchained", 2012, "A freed slave hunts bounties and rescues his wife."),
+            new Movie(74, "Inglourious Basterds", 2009, "Soldiers plot to assassinate Nazi leaders in occupied France."),
+            new Movie(75, "Kill Bill: Vol. 1", 2003, "An assassin seeks revenge on her former colleagues."),
+            new Movie(76, "Reservoir Dogs", 1992, "A heist gone wrong leads to paranoia among thieves."),
+            new Movie(77, "The Big Lebowski", 1998, "A slacker is mistaken for a millionaire and drawn into chaos."),
+            new Movie(78, "Fargo", 1996, "A pregnant sheriff investigates a kidnapping gone awry."),
+            new Movie(79, "A Beautiful Mind", 2001, "A mathematician battles schizophrenia while solving equations."),
+            new Movie(80, "The Theory of Everything", 2014, "Stephen Hawking's romance and scientific achievements."),
+            new Movie(81, "The Imitation Game", 2014, "Alan Turing cracks Nazi codes during World War II."),
+            new Movie(82, "Hidden Figures", 2016, "Black women mathematicians help NASA reach space."),
+            new Movie(83, "First Man", 2018, "Neil Armstrong's journey to the moon."),
+            new Movie(84, "Apollo 13", 1995, "Astronauts fight to survive a crippled spacecraft."),
+            new Movie(85, "Gravity", 2013, "Astronauts struggle to survive after debris strikes their shuttle."),
+            new Movie(86, "The Martian", 2015, "An astronaut survives alone on Mars using science and wit."),
+            new Movie(87, "Edge of Tomorrow", 2014, "A soldier relives the same battle day to defeat aliens."),
+            new Movie(88, "District 9", 2009, "Aliens are quarantined in Johannesburg slums."),
+            new Movie(89, "Children of Men", 2006, "Humanity faces extinction as women become infertile."),
+            new Movie(90, "V for Vendetta", 2005, "A masked vigilante fights a totalitarian regime."),
+            new Movie(91, "The Bourne Identity", 2002, "An amnesiac discovers he's a trained assassin."),
+            new Movie(92, "Casino Royale", 2006, "James Bond earns his 00 status in a poker showdown."),
+            new Movie(93, "Skyfall", 2012, "Bond confronts his past when MI6 is attacked."),
+            new Movie(94, "Mission: Impossible – Fallout", 2018, "Ethan Hunt races to prevent nuclear catastrophe."),
+            new Movie(95, "John Wick", 2014, "A retired hitman seeks vengeance for his slain dog."),
+            new Movie(96, "The Raid", 2011, "A SWAT team fights through a crime lord's apartment tower."),
+            new Movie(97, "Crouching Tiger, Hidden Dragon", 2000, "Warriors pursue a stolen sword in ancient China."),
+            new Movie(98, "Hero", 2002, "An assassin recounts his mission to a Chinese king."),
+            new Movie(99, "Ip Man", 2008, "A martial arts master defends his country during war."),
+            new Movie(100, "Kung Fu Hustle", 2004, "A gangster wannabe discovers hidden martial arts prowess.")
         });
-    }
 
-    private void SeedActors()
-    {
-        Actors.AddRange(new Actor[]
-        {
-            new Actor(1, "Tom Hanks", 1956),
-            new Actor(2, "Leonardo DiCaprio", 1974),
-            new Actor(3, "Christian Bale", 1974),
-            new Actor(4, "Keanu Reeves", 1964),
-            new Actor(5, "Samuel L. Jackson", 1948),
-            new Actor(6, "Morgan Freeman", 1937),
-            new Actor(7, "Al Pacino", 1940),
-            new Actor(8, "Jack Nicholson", 1937),
-            new Actor(9, "Harrison Ford", 1942),
-            new Actor(10, "Denzel Washington", 1954),
-            new Actor(11, "Meryl Streep", 1949),
-            new Actor(12, "Robert De Niro", 1943),
-            new Actor(13, "Marlon Brando", 1924),
-            new Actor(14, "Brad Pitt", 1963),
-            new Actor(15, "Johnny Depp", 1963),
-            new Actor(16, "Tom Cruise", 1962),
-            new Actor(17, "Will Smith", 1968),
-            new Actor(18, "Matthew McConaughey", 1969),
-            new Actor(19, "Ryan Gosling", 1984),
-            new Actor(20, "Christian Nolan", 1970),
-            new Actor(21, "Anthony Hopkins", 1937),
-            new Actor(22, "Gary Oldman", 1958),
-            new Actor(23, "Joaquin Phoenix", 1974),
-            new Actor(24, "Timothée Chalamet", 1995),
-            new Actor(25, "Oscar Isaac", 1979),
-            new Actor(26, "Michael Fassbender", 1977),
-            new Actor(27, "Jake Gyllenhaal", 1980),
-            new Actor(28, "Chris Evans", 1981),
-            new Actor(29, "Robert Downey Jr.", 1965),
-            new Actor(30, "Mark Ruffalo", 1966),
-            new Actor(31, "Chris Hemsworth", 1983),
-            new Actor(32, "Chris Pratt", 1979),
-            new Actor(33, "Tom Hiddleston", 1981),
-            new Actor(34, "Benedict Cumberbatch", 1976),
-            new Actor(35, "Michael B. Jordan", 1987),
-            new Actor(36, "Chadwick Boseman", 1977),
-            new Actor(37, "Idris Elba", 1972),
-            new Actor(38, "Dwayne Johnson", 1972),
-            new Actor(39, "Vin Diesel", 1978),
-            new Actor(40, "Jason Statham", 1967),
-            new Actor(41, "Arnold Schwarzenegger", 1947),
-            new Actor(42, "Sylvester Stallone", 1946),
-            new Actor(43, "Bruce Willis", 1955),
-            new Actor(44, "Jean-Claude Van Damme", 1960),
-            new Actor(45, "Jackie Chan", 1954),
-            new Actor(46, "Jet Li", 1963),
-            new Actor(47, "Pierce Brosnan", 1953),
-            new Actor(48, "Daniel Craig", 1968),
-            new Actor(49, "Sean Connery", 1930),
-            new Actor(50, "Roger Moore", 1927)
-        });
+        _nextMovieId = 100;
     }
 
     private void SeedUsers()

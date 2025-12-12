@@ -1,1 +1,1 @@
-{"ContentRoots":["C:\\Users\\andre\\Downloads\\SIMPLEMDB1\\src\\Smdb.Csr\\wwwroot\\"],"Root":{"Children":null,"Asset":null,"Patterns":[{"ContentRootIndex":0,"Pattern":"**","Depth":0}]}}
+{"ContentRoots":["C:\\Users\\andre\\Downloads\\SIMPLEMDB1\\src\\Smdb.Csr\\wwwroot\\"],"Root":{"Children":{"scripts":{"Children":{"index.js":{"Children":null,"Asset":{"ContentRootIndex":0,"SubPath":"scripts/index.js"},"Patterns":null}},"Asset":null,"Patterns":null}},"Asset":null,"Patterns":[{"ContentRootIndex":0,"Pattern":"**","Depth":0}]}}
