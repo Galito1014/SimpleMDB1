@@ -13,3 +13,4 @@ C:\Users\andre\Downloads\SIMPLEMDB1\src\Smdb.Core\obj\Debug\net8.0\Smdb.Core.dll
 C:\Users\andre\Downloads\SIMPLEMDB1\src\Smdb.Core\obj\Debug\net8.0\refint\Smdb.Core.dll
 C:\Users\andre\Downloads\SIMPLEMDB1\src\Smdb.Core\obj\Debug\net8.0\Smdb.Core.pdb
 C:\Users\andre\Downloads\SIMPLEMDB1\src\Smdb.Core\obj\Debug\net8.0\ref\Smdb.Core.dll
+C:\Users\andre\Downloads\SIMPLEMDB1\src\Smdb.Core\obj\Debug\net8.0\Smdb.Core.sourcelink.json

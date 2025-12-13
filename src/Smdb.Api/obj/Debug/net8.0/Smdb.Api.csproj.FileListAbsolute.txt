@@ -18,3 +18,4 @@ C:\Users\andre\Downloads\SIMPLEMDB1\src\Smdb.Api\obj\Debug\net8.0\refint\Smdb.Ap
 C:\Users\andre\Downloads\SIMPLEMDB1\src\Smdb.Api\obj\Debug\net8.0\Smdb.Api.pdb
 C:\Users\andre\Downloads\SIMPLEMDB1\src\Smdb.Api\obj\Debug\net8.0\Smdb.Api.genruntimeconfig.cache
 C:\Users\andre\Downloads\SIMPLEMDB1\src\Smdb.Api\obj\Debug\net8.0\ref\Smdb.Api.dll
+C:\Users\andre\Downloads\SIMPLEMDB1\src\Smdb.Api\obj\Debug\net8.0\Smdb.Api.sourcelink.json

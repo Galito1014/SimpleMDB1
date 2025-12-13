@@ -12,3 +12,4 @@ C:\Users\andre\Downloads\SIMPLEMDB1\obj\Debug\net8.0\refint\SimpleMDB.dll
 C:\Users\andre\Downloads\SIMPLEMDB1\obj\Debug\net8.0\SimpleMDB.pdb
 C:\Users\andre\Downloads\SIMPLEMDB1\obj\Debug\net8.0\SimpleMDB.genruntimeconfig.cache
 C:\Users\andre\Downloads\SIMPLEMDB1\obj\Debug\net8.0\ref\SimpleMDB.dll
+C:\Users\andre\Downloads\SIMPLEMDB1\obj\Debug\net8.0\SimpleMDB.sourcelink.json
