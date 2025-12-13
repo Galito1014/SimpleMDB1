@@ -1,4 +1,0 @@
-[Server] Listening on http://localhost:5001
-[9d39d276] GET /index.html
-[Router] Routing GET /index.html
-[9d39d276] -> 404 (42.17ms)
